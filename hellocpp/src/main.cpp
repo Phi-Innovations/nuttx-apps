@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include "HelloWorld.h"
+#include "Log.h"
+#include <nuttx/config.h>
+#include <iostream>
 
 extern "C"
 {
-	int hello_main(void)
+	int phigw_main(void)
 	{
-		printf("Inicio de execucao do programa\n");
+		Log::print("PHI: Exemplo em CMake");
 
 		CHelloWorld *pHelloWorld = new CHelloWorld();
 		pHelloWorld->HelloWorld();
